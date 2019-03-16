@@ -1,22 +1,20 @@
-import urllib.request
 from bs4 import BeautifulSoup
+import requests
 
-##Make class for work with web site
-class Scraper:
+
+# Make class for work with web site
+
+class Parse:
     def __init__(self, site):
         self.site = site
-    
-    def scraper (self):
-        read_url = urllib.request.urlopen(self.site)
-        file_of_html = read_url.read()
-        parser = "html.parser"
-        html = BeautifulSoup(file_of_html, parser)
-        for tag in html.find_all("a"):
-            url = tag.get("href")
-            if url is None:
-                continue
-            if "html" in url:
-                print("\n", + url)
 
-news = "https://news.google.ru/"
-Scraper(news).scraper
+    def sabscr(self):
+        response = requests.get(self.site, timeout=5)
+        content = BeautifulSoup(response.content, "html.parser")
+        for tag_linck in content.findAll('a', attrs={"class": "text-bold"}):
+            open = tag_linck.text.encode('utf-8')
+            print(open)
+
+
+url = "https://github.com/Roman84asas"
+Parse(url).sabscr()
