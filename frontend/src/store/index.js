@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import Axios from 'axios';
+import Axios from "axios";
 import todos from './modules/todo';
 
 Vue.use(Vuex);
