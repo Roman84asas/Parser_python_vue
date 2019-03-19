@@ -1,4 +1,4 @@
-import Axios from 'axios';
+/* import Axios from 'axios';
 
 state = {
   data: null,
@@ -22,7 +22,7 @@ mutations = {
 
 actions = {
   GET_DATA: async (context, payload) => {
-    let {data} = await Axios.get('http://localhost:8085/data/data.json');
+    let {data} = await Axios.get('http://localhost:8080/data/data.json');
     context.commit('SET_DATA', data);
   },
 
@@ -37,4 +37,4 @@ export default {
   getters,
   mutations,
   actions,
-};
+}; */
