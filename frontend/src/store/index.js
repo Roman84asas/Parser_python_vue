@@ -1,6 +1,6 @@
-/*import Vue from 'vue';
+import Vue from 'vue';
 import Vuex from 'vuex';
-import todos from './modules/todo';
+import todo from './modules/todo';
 
 Vue.use(Vuex);
 
@@ -10,6 +10,6 @@ export const store = new Vuex.Store({
   mutations: {},
   actions: {},
   modules: {
-    todos,
+    todo,
   },
-});*/
+});

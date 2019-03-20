@@ -1,33 +1,33 @@
-/* import Axios from 'axios';
+import Axios from 'axios';
 
 state = {
-  data: null,
+  datas: null,
 };
 
 getters = {
-  DATAS: state => {
-    return state.data;
+  getDatas: state => {
+    return state.datas;
   },
 };
 
 mutations = {
   SET_DATA: (state, payload) => {
-    state.data = payload;
+    state.datas = payload;
   },
 
   ADD_DATA: (state, payload) => {
-    state.data.push(payload);
+    state.datas.push(payload);
   },
 };
 
 actions = {
   GET_DATA: async (context, payload) => {
-    let {data} = await Axios.get('http://localhost:8080/data/data.json');
-    context.commit('SET_DATA', data);
+    let {datas} = await Axios.get('http://localhost:8080/data/data.json');
+    context.commit('SET_DATA', datas);
   },
 
   SAVE_DATA: async (context, payload) => {
-    let {data} = await Axios.post('../../../../parser/request_post.py');
+    let {datas} = await Axios.post('../../../../parser/request_post.py');
     context.commit('ADD_DATA', payload);
   },
 };
@@ -37,4 +37,4 @@ export default {
   getters,
   mutations,
   actions,
-}; */
+};

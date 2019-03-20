@@ -1,17 +1,26 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+    <div class="hello">
+        <h1>{{ msg }}</h1>
+        <ShowURL/>
+    </div>
 
-  </div>
 </template>
 
+
+
 <script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
+    import ShowURL from './ShowURL.vue'
+    //import InputURL from './InputURL.vue'
+
+    export default {
+        name: 'Home',
+        components: {
+            ShowURL
+        },
+        props: {
+            msg: String
+        }
+    }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
