@@ -19,7 +19,7 @@ class Parse:
                 data = tag_linck.text.encode('utf-8')
                 data_str = str(data)[2:-1]
                 data_befor.append(data_str)
-        with open('../frontend/data/data.json', 'w') as outfile:
+        with open('../frontend/api/data.json', 'w') as outfile:
             json.dump(data_befor, outfile)
 
 url = "https://github.com/Roman84asas"

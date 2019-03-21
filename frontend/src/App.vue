@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="logo" src="./assets/Logo.png">
+    <img alt="logo" src="./assets/logo.png">
     <Home msg="Parsing site"/>
   </div>
 </template>

@@ -1,16 +1,16 @@
 import Axios from 'axios';
 
-state = {
-  datas: null,
+const state = {
+    datas: null,
 };
 
-getters = {
+const getters = {
   getDatas: state => {
     return state.datas;
   },
 };
 
-mutations = {
+const mutations = {
   SET_DATA: (state, payload) => {
     state.datas = payload;
   },
@@ -20,15 +20,15 @@ mutations = {
   },
 };
 
-actions = {
+const actions = {
   GET_DATA: async (context, payload) => {
-    let {datas} = await Axios.get('http://localhost:8080/data/data.json');
-    context.commit('SET_DATA', datas);
+    let {data} = await Axios.get('http://localhost:8080/api/data.json');
+    context.commit('SET_DATA', data);
   },
 
   SAVE_DATA: async (context, payload) => {
-    let {datas} = await Axios.post('../../../../parser/request_post.py');
-    context.commit('ADD_DATA', payload);
+    let {data} = await Axios.post('../../../../parser/request_post.py');
+    context.commit('ADD_DATA', data);
   },
 };
 
