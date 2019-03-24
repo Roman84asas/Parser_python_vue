@@ -1,33 +1,34 @@
 import Axios from 'axios';
+import getData from '../../../data/data'
 
 const state = {
-    datas: null,
+    data: [],
 };
 
 const getters = {
-  getDatas: state => {
-    return state.datas;
+  getJson: state => {
+    return state.data;
   },
 };
 
 const mutations = {
   SET_DATA: (state, payload) => {
-    state.datas = payload;
+    state.data = payload;
   },
 
   ADD_DATA: (state, payload) => {
-    state.datas.push(payload);
+    state.data.push(payload);
   },
 };
 
 const actions = {
-  GET_DATA: async (context, payload) => {
-    let {data} = await Axios.get('http://localhost:8080/api/data.json');
-    context.commit('SET_DATA', data);
+  GET_DATA: async (context) => {
+    let dataFrom = getData.getArray();
+    context.commit('SET_DATA', dataFrom);
   },
 
-  SAVE_DATA: async (context, payload) => {
-    let {data} = await Axios.post('../../../../parser/request_post.py');
+  SAVE_DATA: async (context) => {
+    let data = await Axios.post('../../../../parser/request_post.py');
     context.commit('ADD_DATA', data);
   },
 };
