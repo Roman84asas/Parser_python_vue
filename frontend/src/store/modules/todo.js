@@ -23,7 +23,7 @@ const mutations = {
 
 const actions = {
   GET_DATA: async (context) => {
-    let dataFrom = getData.getArray();
+    let dataFrom = getData.getArray();// get a data from module in data
     context.commit('SET_DATA', dataFrom);
   },
 
