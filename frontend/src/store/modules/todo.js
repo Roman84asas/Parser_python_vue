@@ -1,5 +1,5 @@
-// import Axios from 'axios';
-import getData from '../../../data/data'
+import Axios from 'axios';
+
 
 const state = {
     data: [],
@@ -7,7 +7,7 @@ const state = {
 };
 
 const getters = {
-  getJson: state => {
+  GET_JSON: state => {
     return state.data;
   },
 };
@@ -22,8 +22,10 @@ const mutations = {
 
 const actions = {
   SAVE_DATA: async (context) => {
-      let dataFrom = getData.getArray();// get a data from module in data
-      context.commit('GET_DATA', dataFrom);
+      let {data} = await Axios.get('http://localhost:3000/post')
+      context.commit('GET_DATA', data)
+
+
   },
 };
 

@@ -1,11 +1,11 @@
 <template>
     <div class="data">
         <h2>The repository from URL</h2>
-        <p v-show="!getJson.length"><i>Please add some URL repository.</i></p>
+        <p v-show="!GET_JSON.length"><i>Please add some URL repository.</i></p>
         <ul>
             <li
-                v-for="data in getJson"
-                :key="data">
+                v-for="(data, index) in GET_JSON"
+                :key="index">
                 {{ data }}
             </li>
         </ul>
@@ -14,17 +14,15 @@
 </template>
 
 <script>
-    import { mapGetters, mapActions } from 'vuex'
+    import { mapGetters } from 'vuex'
 
 
     export default {
         name: "ShowURL",
+        mounted: function (){this.$store.dispatch('SAVE_DATA')},
         computed: {
             ...mapGetters([
-                'getJson',
-            ]),
-            ...mapActions([
-                'SAVE_DATA',
+                'GET_JSON',
             ])
         }
 
