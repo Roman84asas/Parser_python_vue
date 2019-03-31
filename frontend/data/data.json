@@ -1,5 +1,17 @@
 {
   "post":[
-    { "1": "LaraReaProgr", "2": "reset.css", "3": "Sandbox", "4": "Calculator-on-js5", "5": "Parser_python_vue" }
+    { "id": 1, "body": "LaraReaProgr", "author": "typicode" }
+  ],
+  "post2":[
+    {"id": 2, "body": "reset.css", "author": "typicode" }
+  ],
+  "post3":[
+    {"id": 3, "body": "Sandbox", "author": "typicode" }
+  ],
+  "post4":[
+    {"id": 4, "body": "Calculator-on-js5", "author": "typicode" }
+  ],
+  "post5":[
+    {"id": 5, "body": "Parser_python_vue", "author": "typicode" }
   ]
 }
