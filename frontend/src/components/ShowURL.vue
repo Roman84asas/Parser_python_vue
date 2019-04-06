@@ -4,9 +4,9 @@
         <p v-show="!GET_JSON.length"><i>Please add some URL repository.</i></p>
         <ul>
             <li
-                v-for="(data, index) in GET_JSON"
-                :key="index">
-                {{ data }}
+                v-for="data in GET_JSON"
+                :key="data.id">
+                {{ data.body }}
             </li>
         </ul>
 

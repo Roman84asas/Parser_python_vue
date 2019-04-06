@@ -22,7 +22,7 @@ const mutations = {
 
 const actions = {
   SAVE_DATA: async (context) => {
-      let {data} = await Axios.get('http://localhost:3000/post')
+      let {data} = await Axios.get('http://localhost:3000/posts')
       context.commit('GET_DATA', data)
 
 

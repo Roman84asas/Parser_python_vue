@@ -1,17 +1,9 @@
 {
-  "post":[
-    { "id": 1, "body": "LaraReaProgr", "author": "typicode" }
-  ],
-  "post2":[
-    {"id": 2, "body": "reset.css", "author": "typicode" }
-  ],
-  "post3":[
-    {"id": 3, "body": "Sandbox", "author": "typicode" }
-  ],
-  "post4":[
-    {"id": 4, "body": "Calculator-on-js5", "author": "typicode" }
-  ],
-  "post5":[
+  "posts":[
+    { "id": 1, "body": "LaraReaProgr", "author": "typicode" },
+    {"id": 2, "body": "reset.css", "author": "typicode" },
+    {"id": 3, "body": "Sandbox", "author": "typicode" },
+    {"id": 4, "body": "Calculator-on-js5", "author": "typicode" },
     {"id": 5, "body": "Parser_python_vue", "author": "typicode" }
   ]
 }
