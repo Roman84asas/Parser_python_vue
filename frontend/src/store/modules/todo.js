@@ -14,7 +14,7 @@ const getters = {
 
 const mutations = {
   GET_DATA: (state, payload) => {
-    state.data.push(payload);
+    state.data = {...payload};
   },
 
 
@@ -24,8 +24,6 @@ const actions = {
   SAVE_DATA: async (context) => {
       let {data} = await Axios.get('http://localhost:3000/posts')
       context.commit('GET_DATA', data)
-
-
   },
 };
 

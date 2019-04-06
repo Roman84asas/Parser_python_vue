@@ -1,12 +1,14 @@
 <template>
     <div class="data">
         <h2>The repository from URL</h2>
-        <p v-show="!GET_JSON.length"><i>Please add some URL repository.</i></p>
+        <p v-show="!Object.keys(GET_JSON).length">
+            <i>Please add some URL repository.</i>
+        </p>
         <ul>
             <li
-                v-for="data in GET_JSON"
-                :key="data.id">
-                {{ data.body }}
+                v-for="datas in GET_JSON"
+                :key="datas.id">
+                {{ datas.body }}
             </li>
         </ul>
 
