@@ -1,7 +1,7 @@
 <template>
     <div class="data">
         <h2>The repository from URL</h2>
-        <p v-show="!Object.keys(GET_JSON).length">
+        <p v-show="!Object.keys(GET_JSON).length" v-bind:style="{'color': color, 'text-align': text_align}">
             <i>Please add some URL repository.</i>
         </p>
         <ul>
@@ -26,7 +26,13 @@
             ...mapGetters([
                 'GET_JSON',
             ])
-        }
+        },
+        data: function() {
+            return {
+            color: 'red',
+            text_align: 'center'
+        };
+}
 
     }
 
